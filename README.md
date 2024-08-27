@@ -1,5 +1,8 @@
 ## Hi there 👋
 
+My name is Spiph, and I am interested in Reinforcement Learning research.
+
+My favorite dinosaur is the [Velociraptor](https://en.wikipedia.org/wiki/Velociraptor).
 <!--
 **Spiph/Spiph** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
