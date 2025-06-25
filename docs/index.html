@@ -1,18 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Ian Cannon's Web Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ian Cannon - Resume</title>
+  <!-- Bootswatch Litera Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/litera/bootstrap.min.css">
+  <!-- Optional: Font Awesome for icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-p/+8NHw8IxDzL4tRu7Pb8JdtEQc3T0+T3iH7F5Zywyy6nMl0a3+wa6GwXL4vTgD3DB39pqB8fUYp6l0F3rZkiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    .profile-pic { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; }
+    .section-title { border-bottom: 3px solid #0d6efd; padding-bottom: .3rem; margin-bottom: 1rem; }
+    .sidebar { background-color: #f8f9fa; padding: 20px; border-radius: .25rem; }
+  </style>
 </head>
 <body>
-  <h1>Ian Cannon</h1>
+  <div class="container py-5">
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <img src="headshot.jpg" alt="Ian Cannon" class="profile-pic mb-3">
+      <h1>Ian Cannon</h1>
+      <p class="text-muted">cannoni1@udayton.edu | (555) 123-4567 | <a href="#">linkedin.com/in/ian-cannon</a></p>
+      <a href="resume.pdf" class="btn btn-primary" download>
+        <i class="fas fa-download"></i> Download PDF
+      </a>
+    </div>
 
-  <p><strong>Email:</strong> cannoni1@udayton.edu </p>
-  <img src="headshot.jpg" alt="Ian Cannon Headshot" width="50">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-4 mb-4">
+        <div class="sidebar">
+          <h4 class="section-title">Skills</h4>
+          <ul class="list-unstyled">
+            <li>Python, Machine Learning, Reinforcement Learning</li>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>Bootstrap, jQuery</li>
+            <li>PHP, MySQL</li>
+            <li>Git, GitHub</li>
+            <li>Web Application Security</li>
+          </ul>
+          <h4 class="section-title mt-4">Languages</h4>
+          <ul class="list-unstyled">
+            <li>English (Native)</li>
+            <li>French (Intermediate)</li>
+          </ul>
+        </div>
+      </div>
 
-  <p>Education, Experience, and Skills</p>
+      <!-- Main Content -->
+      <div class="col-md-8">
+        <section id="summary" class="mb-5">
+          <h2 class="section-title">Professional Summary</h2>
+          <p><!-- Add your professional summary here --></p>
+        </section>
 
-  <p><a href="resume.pdf" download>Download my Resume (PDF)</a></p>
+        <section id="experience" class="mb-5">
+          <h2 class="section-title">Work Experience</h2>
+          <div class="mb-4">
+            <h5>Team Lead Senior Machine Learning Researcher – UDRI</h5>
+            <p class="text-muted"><em>Dayton, OH | Febuary 2019 – Present</em></p>
+            <ul>
+              <li>Leading a team of six researchers across many DoD-funded projects in reinforcement learning</li>
+            </ul>
+          </div>
+          <!-- Repeat for each position -->
+        </section>
 
-  <p><a href="waph.html">About WAPH</a></p>
+        <section id="education" class="mb-5">
+          <h2 class="section-title">Education</h2>
+          <div>
+            <h5>Master's in Computer Science</h5>
+            <p class="text-muted"><em>University of Dayton | December 2023</em></p>
+            <ul>
+              <li>GPA: 4.0</li>
+              <li>Relevant coursework: AI, Computer Vision, Web Applications and Hacking</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="projects" class="mb-5">
+          <h2 class="section-title">Projects</h2>
+          <div class="mb-4">
+            <h5>Project Title</h5>
+            <p class="mb-1"><em>This is where I will write a project description for all my projects</em></p>
+            <ul>
+              <li><!-- Technologies used, your role --></li>
+            </ul>
+          </div>
+          <!-- Add more projects as needed -->
+        </section>
+
+        <!-- <section id="certifications" class="mb-5">
+          <h2 class="section-title">Certifications</h2>
+          <ul>
+            <li>Certification Name – Issuer, Year</li>
+          </ul>
+        </section> -->
+
+        <section id="additional" class="mb-5">
+          <h2 class="section-title">Additional Information</h2>
+          <p><!-- Hobbies, volunteer work, or other relevant info --></p>
+        </section>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
