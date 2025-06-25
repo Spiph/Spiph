@@ -1,19 +1,15 @@
-## Hi there 👋
+# Web Application Programming and Hacking
+Instructor: Dr. Phu Phung
+Student: Ian Cannon
+**Email**: [mailto:cannoni1@udayton.edu](cannoni1@udayton.edu)
 
-My name is Spiph, and I am interested in Reinforcement Learning research.
+**Short-bio**: Ian Cannon interests in Reinforcement Learning for Autonomous Control. 
 
-My favorite dinosaur is the [Velociraptor](https://en.wikipedia.org/wiki/Velociraptor).
-<!--
-**Spiph/Spiph** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+![Ian's headshot](../images/headshot.jpg)
 
-Here are some ideas to get you started:
+## Repository Information
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Respository's URL: [https://github.com/Spiph/WebAppDev](https://github.com/Spiph/WebAppDev)
+
+This is a public repository for Ian Cannon to store all code from the course. The organization of this repository is as follows.
+
