@@ -1,4 +1,4 @@
-# Resume
+# Web Application Programming and Hacking
 Instructor: Dr. Phu Phung
 
 Student: Ian Cannon
@@ -7,7 +7,7 @@ Student: Ian Cannon
 
 **Short-bio**: Ian Cannon interests in Reinforcement Learning for Autonomous Control. 
 
-![Ian's headshot](images/headshot.jpg)
+![Ian's headshot](assets/headshot.jpg)
 
 ## Repository Information
 
