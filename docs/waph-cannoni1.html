@@ -212,7 +212,7 @@
 
     <div id="joke-section" style="margin: 30px; padding: 16px; border: 2px dashed #aaa; border-radius: 12px; background: #f9f9f9;">
     <h2 style="font-family: 'Comic Sans MS', cursive, sans-serif; color: #2c3e50;">
-         Daily Developer Chuckle
+        Minutely Developer Chuckle
     </h2>
     <div id="joke-container" style="margin-top: 12px; font-family: monospace; font-size: 1.1em; color: #333;">
         Loading a programming joke...
@@ -220,16 +220,28 @@
     </div>
 
     <script>
-    $(document).ready(function() {
-        $.get("https://v2.jokeapi.dev/joke/Programming?type=single", function(response) {
-        if (!response.error && response.joke) {
-            $("#joke-container").html("💻 " + response.joke);
-        } else {
-            $("#joke-container").text("Oops! Couldn't fetch a joke.");
-        }
-        }).fail(function() {
-        $("#joke-container").text("Network error – failed to fetch a joke.");
+    // 1) function to fetch & display one joke
+    function loadJoke() {
+        fetch("https://v2.jokeapi.dev/joke/Any?type=single")
+        .then(res => res.json())
+        .then(response => {
+            const slot = document.getElementById("joke-container");
+            if (!response.error && response.joke) {
+            slot.innerHTML = "💻 " + response.joke;
+            } else {
+            slot.textContent = "Oops! Couldn't fetch a joke.";
+            }
+        })
+        .catch(() => {
+            document.getElementById("joke-container")
+            .textContent = "Network error – failed to fetch a joke.";
         });
+    }
+
+    // 2) On DOM ready, run immediately, then every 60 000 ms
+    document.addEventListener("DOMContentLoaded", () => {
+        loadJoke();
+        setInterval(loadJoke, 60000);
     });
     </script>
 
