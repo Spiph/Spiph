@@ -7,7 +7,7 @@ Student: Ian Cannon
 
 **Short-bio**: Ian Cannon interests in Reinforcement Learning for Autonomous Control. 
 
-![Ian's headshot](assets/headshot.jpg)
+![Ian's headshot](docs/headshot.jpg)
 
 ## Repository Information
 
@@ -25,5 +25,29 @@ Look I made a website! with css and my headshot resume and contact. You can also
 Here is my vitors flag counter.
 
 ![Flags](image-1.png)
+
+### Technical Requirements
+
+![add updater every minute](image-2.png)
+
+![age predicter](image-3.png)
+
+This one was for fun since we only needed two, I just like xkcd
+
+![XKCD comics!](image-5.png)
+
+![cookies!](image-4.png)
+
+# My Code
+
+[text](docs/clock.js)
+
+[text](docs/echo.php) 
+
+[text](docs/email.js) 
+
+[text](docs/index.html) 
+
+[text](docs/waph-cannoni1.html)
 
 
