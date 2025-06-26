@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WAPH Demo Page</title>
-  <link rel="stylesheet" href="https://waph-phung.github.io/style2.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    <meta charset="UTF-8">
+    <title>WAPH Demo Page</title>
+    <link rel="stylesheet" href="https://waph-phung.github.io/style2.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
+
+    <script>
+        // helper to read a named cookie
+        function getCookie(name) {
+            const matches = document.cookie.match(
+            new RegExp('(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,'\\$1') + '=([^;]*)')
+            );
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+
+        // helper to set a cookie (expires in days)
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + days*24*60*60*1000);
+            expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const last = getCookie("lastVisit");
+            if (!last) {
+            alert("Welcome to my homepage for the first time!");
+            } else {
+            alert(`Welcome back! Your last visit was ${last}`);
+            }
+            // store today’s timestamp for next time
+            setCookie("lastVisit", new Date().toString(), 365);
+        });
+    </script>
+
 </head>
 <body>
     <h1>WAPH Demo Page for Ian Cannon</h1>
@@ -214,6 +247,7 @@
     <h2 style="font-family: 'Comic Sans MS', cursive, sans-serif; color: #2c3e50;">
         Minutely Developer Chuckle
     </h2>
+    <p><small>All jokes are fetched from a public/third-party service (xkcd.com). I am not responsible for its content.</small></p>
     <div id="joke-container" style="margin-top: 12px; font-family: monospace; font-size: 1.1em; color: #333;">
         Loading a programming joke...
     </div>
@@ -279,6 +313,34 @@
         });
     }
     </script>
+
+    <!-- XKCD Comic Section -->
+    <section id="xkcd-comic" style="margin:30px; padding:16px; border:2px solid #ccc; border-radius:8px; background:#f0f0f0;">
+    <h2 style="font-family:'Comic Sans MS',cursive; color:#34495e;">Random XKCD Comic</h2>
+    <img id="xkcd-img" src="" alt="Loading XKCD..." style="max-width:100%; height:auto; display:block; margin:12px auto;">
+    <p id="xkcd-title" style="text-align:center; font-style:italic;"></p>
+    <p><small>All comics are fetched from a public/third-party service (xkcd.com). I am not responsible for its content.</small></p>
+    </section>
+
+    <script>
+    async function loadXkcd() {
+        try {
+        const res = await fetch('https://xkcd.now.sh/?comic=latest');
+        const data = await res.json();
+        // Insert the image & title
+        const img = document.getElementById('xkcd-img');
+        img.src = data.img;
+        img.alt = data.alt || 'xkcd comic';
+        document.getElementById('xkcd-title').textContent = data.title;
+        } catch (err) {
+        document.getElementById('xkcd-title').textContent = "Could not load the comic.";
+        }
+    }
+
+    // Load one comic on page-load
+    document.addEventListener('DOMContentLoaded', loadXkcd);
+    </script>
+
 
 </body>
 </html>
