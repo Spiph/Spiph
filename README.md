@@ -15,5 +15,15 @@ Respository's URL: [https://github.com/Spiph/Spiph](https://github.com/spiph/Web
 
 This is a public repository for Ian Cannon to store all code from the course. The organization of this repository is as follows.
 
+### General Requirements
+
+Look I made a website! with css and my headshot resume and contact. You can also see the CSS that I added.
+
+![My website](image.png)
+
+
+Here is my vitors flag counter.
+
+![Flags](image-1.png)
 
 
